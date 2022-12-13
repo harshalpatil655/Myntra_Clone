@@ -5,8 +5,81 @@ const MensdataRoute = Router();
 
 MensdataRoute.get("/mensdata", async (req, res) => {
   try {
-    const data = await MensdataModel.find();
-    res.send(data);
+    let query = req.query;
+
+    let brand = query.brand || [];
+    let category = query.category || [];
+    let price = query.price || [];
+    let low = Number(price[0]);
+    let high = Number(price[1]);
+
+    if (category.length > 0 && brand.length > 0 && price.length > 0) {
+      console.log(query);
+      const data = await MensdataModel.find({
+        $and: [
+          { price: { $gte: price[0] } },
+          { price: { $lte: price[1] } },
+          { brand: { $in: [...brand] } },
+          { category: { $in: [...category] } },
+        ],
+      });
+      res.send(data);
+    } else if (price.length > 0 && brand.length > 0) {
+      let data = await MensdataModel.find({
+        $and: [
+          { price: { $gte: price[0] } },
+          { price: { $lte: price[1] } },
+          { brand: { $in: [...brand] } },
+        ],
+      });
+
+      res.send(data);
+    } else if (brand.length > 0 && category.length > 0) {
+      //bc
+      let data = await MensdataModel.find({
+        $and: [
+          { brand: { $in: [...brand] } },
+          { category: { $in: [...category] } },
+        ],
+      });
+      res.send(data);
+    } else if (price.length > 0 && category.length > 0) {
+      //pc
+      let data = await MensdataModel.find({
+        $and: [
+          { price: { $gte: price[0] } },
+          { price: { $lte: price[1] } },
+          { category: { $in: [...category] } },
+        ],
+      });
+      res.send(data);
+    } else if (brand.length > 0 && price.length > 0) {
+      //bp
+      let data = await MensdataModel.find({
+        brand: { $in: [...brand] },
+        price: { $gte: price[0] },
+        price: { $lte: price[1] },
+      });
+
+      res.send(data);
+    } else if (price.length > 0) {
+      //p
+      let data = await MensdataModel.find({
+        $and: [{ price: { $gte: price[0] } }, { price: { $lte: price[1] } }],
+      });
+      res.send(data);
+    } else if (brand.length > 0) {
+      //b
+      let data = await MensdataModel.find({ item: { $in: [...brand] } });
+      res.send(data);
+    } else if (category.length > 0) {
+      //c
+      let data = await MensdataModel.find({ category: { $in: [...category] } });
+      res.send(data);
+    } else {
+      const data = await MensdataModel.find();
+      res.send(data);
+    }
   } catch (err) {
     res.send("data failed to get");
   }

@@ -4,7 +4,7 @@ const MensdataSchema = new mongoose.Schema(
   {
     title: { type: String },
     subtit: { type: String },
-    price: { type: String },
+    price: { type: Number },
     offpercentage: { type: String },
     image: { type: String },
     category: { type: String },
