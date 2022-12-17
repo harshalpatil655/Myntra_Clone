@@ -5,7 +5,7 @@ const CartRoute = Router();
 
 CartRoute.get("/", async (req, res) => {
   const { userId } = req.body;
-
+  // console.log(userId);
   const cartItems = await CartModel.find({ userId });
 
   if (cartItems) {
@@ -28,6 +28,7 @@ CartRoute.post("/cartdata", async (req, res) => {
       userId: req.body.userId,
     });
     await data.save();
+    console.log(req.body.userId);
     res.send(data);
   } catch (err) {
     res.send(error);
