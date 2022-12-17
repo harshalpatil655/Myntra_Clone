@@ -1,0 +1,145 @@
+.detailsdiv {
+  display: flex;
+  border-bottom: 1px solid rgb(223, 208, 208);
+  padding-bottom: 2rem;
+  margin-top: 1.5rem;
+}
+.prodimgdiv {
+  width: 50%;
+  border-right: 1px solid rgb(206, 197, 197);
+}
+.prodimg {
+  width: 320px;
+  height: 370px;
+  padding: 0.5rem;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.title {
+  color: gray;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: -20px;
+}
+.star {
+  border-bottom: 1px solid rgb(191, 187, 187);
+  margin-bottom: 1rem;
+  margin-top: -20px;
+}
+.price {
+  font-size: 25px;
+  font-weight: 700;
+  color: black;
+}
+.subtit {
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+.offpercentage {
+  font-size: 22px;
+  font-weight: 450;
+  color: #ff9a5a;
+}
+.taxes {
+  color: #03a687;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: -20px;
+}
+.infodiv {
+  width: 50%;
+  text-align: start;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.sizecircle {
+  border: 0.5px solid gray;
+  background-color: #03a687;
+
+  font-size: 15px;
+}
+.avatar {
+  display: flex;
+  gap: 10px;
+}
+.sizecircle:hover {
+  border: 2px solid #ff3e6c;
+  background-color: #ff3e6c;
+}
+
+.btndiv {
+  display: flex;
+  gap: 20px;
+  margin-top: 2rem;
+}
+.cartbtn {
+  width: 250px;
+  height: 45px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff3e6c;
+  color: white;
+}
+.wishbtn {
+  width: 200px;
+  border: 1px solid gray;
+  color: black;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: white;
+}
+.sizeselect {
+  font-size: 15px;
+  font-weight: 700;
+  color: black;
+}
+.sizechart {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ff3e6c;
+  margin-left: 3rem;
+}
+.mrpdiv {
+  display: flex;
+  gap: 20px;
+}
+/* //////////////////////////////////Infodiv */
+.downdiv {
+  display: flex;
+  gap: 50px;
+  padding: 2rem;
+}
+.okdiv {
+  display: flex;
+  gap: 20px;
+}
+.pincode {
+  border: 1px solid rgb(232, 212, 212);
+  border-radius: 10px;
+  padding: 2rem;
+  width: 40%;
+}
+.offer {
+  border: 1px solid rgb(232, 212, 212);
+  border-radius: 10px;
+  width: 40%;
+  text-align: start;
+  padding-left: 2rem;
+}
+.orangeprice {
+  color: #ff9a5a;
+}
+.tagp {
+  color: black;
+  font-size: 14px;
+  font-weight: 450;
+  margin: 1rem;
+}
+.pink {
+  color: #ff3e6c;
+  font-weight: 700;
+  margin-left: 1rem;
+}
