@@ -15,7 +15,6 @@ MensdataRoute.get("/mensdata", async (req, res) => {
     let pageNumber = req.query.page || 1;
 
     if (category.length > 0 && brand.length > 0 && price.length > 0) {
-      console.log(query);
       const data = await MensdataModel.find({
         $and: [
           { price: { $gte: price[0] } },

@@ -55,6 +55,7 @@ export const reducer = (state = initialState, action) => {
         isError: false,
       };
     }
+
     default: {
       return state;
     }

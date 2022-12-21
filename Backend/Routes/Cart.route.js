@@ -5,7 +5,7 @@ const CartRoute = Router();
 
 CartRoute.get("/", async (req, res) => {
   const { userId } = req.body;
-  // console.log(userId);
+
   const cartItems = await CartModel.find({ userId });
 
   if (cartItems) {
@@ -28,10 +28,23 @@ CartRoute.post("/cartdata", async (req, res) => {
       userId: req.body.userId,
     });
     await data.save();
-    console.log(req.body.userId);
+
     res.send(data);
   } catch (err) {
     res.send(error);
+  }
+});
+
+CartRoute.delete("/delete/:id", async (req, res) => {
+  const { _id } = req.params;
+
+  const deleteCart = await CartModel.findOneAndDelete({ _id });
+  console.log(deleteCart);
+  if (deleteCart) {
+    console.log("Hell");
+    res.send("deleted Successfully");
+  } else {
+    res.send("Error in deleting");
   }
 });
 

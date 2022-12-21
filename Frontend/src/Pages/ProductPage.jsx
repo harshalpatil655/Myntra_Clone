@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { mensData, postcart } from "../Redux/AppReducer/action";
 import styles from "../CSS/ProductPage.module.css";
 import { Avatar, Button, Rating, TextField } from "@mui/material";
@@ -14,6 +14,11 @@ const ProductPage = () => {
   const store = useSelector((store) => store.AppReducer.data);
   const [product, setProduct] = useState({});
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handlegocart = () => {
+    navigate("/cart");
+  };
 
   useEffect(() => {
     if (store.length === 0) {
@@ -34,7 +39,7 @@ const ProductPage = () => {
   console.log(store);
 
   const handleCart = (product) => {
-    console.log(product);
+    alert("Product Added to cart");
     dispatch(postcart(product));
   };
 
@@ -84,8 +89,12 @@ const ProductPage = () => {
             >
               ADD TO CART
             </button>
-            <button className={styles.wishbtn} variant="outlined">
-              WISHLIST
+            <button
+              onClick={handlegocart}
+              className={styles.wishbtn}
+              variant="outlined"
+            >
+              GO TO CART
             </button>
           </div>
         </div>
