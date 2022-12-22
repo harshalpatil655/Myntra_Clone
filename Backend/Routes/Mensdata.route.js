@@ -23,8 +23,8 @@ MensdataRoute.get("/mensdata", async (req, res) => {
           { category: { $in: [...category] } },
         ],
       })
-        .skip(pageNumber > 0 ? (pageNumber - 1) * 3 : 0)
-        .limit(3);
+        .skip(pageNumber > 0 ? (pageNumber - 1) * 6 : 0)
+        .limit(6);
       res.send(data);
     } else if (price.length > 0 && brand.length > 0) {
       let data = await MensdataModel.find({
@@ -34,8 +34,8 @@ MensdataRoute.get("/mensdata", async (req, res) => {
           { brand: { $in: [...brand] } },
         ],
       })
-        .skip(pageNumber > 0 ? (pageNumber - 1) * 3 : 0)
-        .limit(3);
+        .skip(pageNumber > 0 ? (pageNumber - 1) * 6 : 0)
+        .limit(6);
 
       res.send(data);
     } else if (brand.length > 0 && category.length > 0) {
@@ -46,8 +46,8 @@ MensdataRoute.get("/mensdata", async (req, res) => {
           { category: { $in: [...category] } },
         ],
       })
-        .skip(pageNumber > 0 ? (pageNumber - 1) * 3 : 0)
-        .limit(3);
+        .skip(pageNumber > 0 ? (pageNumber - 1) * 6 : 0)
+        .limit(6);
       res.send(data);
     } else if (price.length > 0 && category.length > 0) {
       //pc
@@ -58,8 +58,8 @@ MensdataRoute.get("/mensdata", async (req, res) => {
           { category: { $in: [...category] } },
         ],
       })
-        .skip(pageNumber > 0 ? (pageNumber - 1) * 3 : 0)
-        .limit(3);
+        .skip(pageNumber > 0 ? (pageNumber - 1) * 6 : 0)
+        .limit(6);
       res.send(data);
     } else if (brand.length > 0 && price.length > 0) {
       //bp
@@ -68,8 +68,8 @@ MensdataRoute.get("/mensdata", async (req, res) => {
         price: { $gte: price[0] },
         price: { $lte: price[1] },
       })
-        .skip(pageNumber > 0 ? (pageNumber - 1) * 3 : 0)
-        .limit(3);
+        .skip(pageNumber > 0 ? (pageNumber - 1) * 6 : 0)
+        .limit(6);
 
       res.send(data);
     } else if (price.length > 0) {
@@ -77,25 +77,25 @@ MensdataRoute.get("/mensdata", async (req, res) => {
       let data = await MensdataModel.find({
         $and: [{ price: { $gte: price[0] } }, { price: { $lte: price[1] } }],
       })
-        .skip(pageNumber > 0 ? (pageNumber - 1) * 3 : 0)
-        .limit(3);
+        .skip(pageNumber > 0 ? (pageNumber - 1) * 6 : 0)
+        .limit(6);
       res.send(data);
     } else if (brand.length > 0) {
       //b
       let data = await MensdataModel.find({ brand: { $in: [...brand] } })
-        .skip(pageNumber > 0 ? (pageNumber - 1) * 3 : 0)
-        .limit(3);
+        .skip(pageNumber > 0 ? (pageNumber - 1) * 6 : 0)
+        .limit(6);
       res.send(data);
     } else if (category.length > 0) {
       //c
       let data = await MensdataModel.find({ category: { $in: [...category] } })
-        .skip(pageNumber > 0 ? (pageNumber - 1) * 3 : 0)
-        .limit(3);
+        .skip(pageNumber > 0 ? (pageNumber - 1) * 6 : 0)
+        .limit(6);
       res.send(data);
     } else {
       const data = await MensdataModel.find()
-        .skip(pageNumber > 0 ? (pageNumber - 1) * 3 : 0)
-        .limit(3);
+        .skip(pageNumber > 0 ? (pageNumber - 1) * 6 : 0)
+        .limit(6);
       res.send(data);
     }
   } catch (err) {

@@ -74,3 +74,16 @@ img {
   width: 220px;
   text-decoration: none;
 }
+.pagediv {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  border-top: 1px solid #000;
+  padding: 2rem;
+}
+.pagediv2 {
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset,
+    rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+  padding: 1rem;
+  border-radius: 5px;
+}

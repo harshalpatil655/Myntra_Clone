@@ -1,15 +1,32 @@
+.mainflex {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 2rem;
+  border-bottom: 1px solid #000;
+  border-top: 1px solid #000;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.flex1 {
+  width: 38%;
+  padding: 1rem;
+}
 .flex2 {
-  width: 70%;
+  width: 58%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   gap: 20px;
-  border: 1px solid red;
   padding: 1rem;
+  border-right: 1px solid #000;
 }
 
 .flex2 > div {
   width: 220px;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset,
+    rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+  padding: 1rem;
 }
 img {
   width: 220px;
@@ -55,7 +72,29 @@ img {
   font-weight: 500;
 }
 .btn {
-  color: #000;
+  background-color: #ff3e6c;
+  color: white;
+  border: none;
   width: 220px;
-  text-decoration: none;
+  height: 40px;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 17px;
+}
+.calcudiv {
+  padding: 1.5rem;
+}
+h4 {
+  color: gray;
+  font-weight: 400;
+}
+.mybag {
+  color: #14cda8;
+  text-decoration: underline;
+  font-weight: 600;
+}
+h5 {
+  text-decoration: underline;
+  color: #ff3e6c;
+  text-align: start;
 }

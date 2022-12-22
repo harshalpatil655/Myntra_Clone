@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import CartPage from "./CartPage";
+import CheckoutPage from "./CheckoutPage";
 import HomePage from "./HomePage";
 import Login from "./Login";
 import Mens from "./Mens";
@@ -16,6 +17,7 @@ const AllRoutes = () => {
       <Route path="/mens" element={<Mens />} />
       <Route path="/product/:id" element={<ProductPage />} />
       <Route path="/cart" element={<CartPage />} />
+      <Route path="/checkout" element={<CheckoutPage />} />
     </Routes>
   );
 };

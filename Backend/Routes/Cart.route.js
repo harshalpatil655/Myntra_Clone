@@ -35,16 +35,23 @@ CartRoute.post("/cartdata", async (req, res) => {
   }
 });
 
-CartRoute.delete("/delete/:id", async (req, res) => {
-  const { _id } = req.params;
+CartRoute.delete("/delete/:_id", async (req, res) => {
+  try {
+    let { _id } = req.params;
+    let { userId } = req.body;
 
-  const deleteCart = await CartModel.findOneAndDelete({ _id });
-  console.log(deleteCart);
-  if (deleteCart) {
-    console.log("Hell");
-    res.send("deleted Successfully");
-  } else {
-    res.send("Error in deleting");
+    const deleteCart = await CartModel.deleteOne({
+      _id,
+      userId,
+    });
+
+    if (deleteCart.deletedCount > 0) {
+      res.status(200).send("deleted Successfully");
+    } else {
+      res.status(400).send("You have not authorised");
+    }
+  } catch (err) {
+    res.status(500).send("You are not Authorised");
   }
 });
 

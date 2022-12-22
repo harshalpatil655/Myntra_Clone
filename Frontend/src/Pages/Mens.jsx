@@ -25,7 +25,7 @@ const Mens = () => {
   const [category, setCategory] = useState([]);
   const [brand, setBrand] = useState([]);
   const [price, setPrice] = useState([]);
-  const [page, setPage] = useState(2);
+  const [page, setPage] = useState(1);
 
   const store = useSelector((store) => store.AppReducer);
 
@@ -36,15 +36,6 @@ const Mens = () => {
       price: price,
       page: page,
     });
-
-    // let mybrand = searchParams.getAll("brand");
-    // let mycategory = searchParams.getAll("category");
-    // let myprice = searchParams.getAll("price");
-
-    // if(brand.length>0 || category.length>0 || price.length>0)
-    // {
-
-    // }
 
     if (location.search !== "") {
       const queryParams = {
@@ -178,6 +169,7 @@ const Mens = () => {
                 name="price"
                 control={<Radio />}
                 label="1500-2000"
+                onChange={handlePrice}
               />
             </RadioGroup>
           </div>
@@ -224,7 +216,7 @@ const Mens = () => {
                     }}
                     variant="outlined"
                   >
-                    ADD TO CART
+                    DETAIL INFO
                   </Button>
                 </Link>
               </div>
@@ -232,12 +224,17 @@ const Mens = () => {
           })}
         </div>
       </div>
-      <div>
-        <Pagination
-          count={10}
-          onClick={(e) => handlePage(e.target.count)}
-          color="primary"
-        />
+      <div className={styles.pagediv}>
+        <div className={styles.pagediv2}>
+          <Pagination
+            count={5}
+            color="primary"
+            defaultPage={page}
+            hideNextButton={true}
+            hidePrevButton={true}
+            onChange={(e, value) => setPage(value)}
+          />
+        </div>
       </div>
     </div>
   );
