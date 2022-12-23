@@ -54,13 +54,13 @@ const CartPage = () => {
       <div className={styles.mainflex}>
         <div className={styles.flex1}>
           <div className={styles.calcudiv}>
-            <h3>{total > 0 ? `Total Amount:-${total}` : "Total Amount"}</h3>
+            <h3>{total > 0 ? `Total Amount:-${total}₹` : "Total Amount"}</h3>
             <button className={styles.btn} onClick={handleCalculate}>
               Calculate
             </button>
           </div>
           <div>
-            <h5>Available Offers</h5>
+            <h5 className={styles.myh5}>Available Offers</h5>
             <p>
               <AiFillCaretRight /> 10% Instant Discount on IDFC FIRST Bank
               Credit and Debit Cards on a min spend of Rs 2,500. TCA

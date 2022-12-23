@@ -143,3 +143,307 @@
   font-weight: 700;
   margin-left: 1rem;
 }
+
+@media (max-width: 1024px) {
+  .detailsdiv {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgb(223, 208, 208);
+    padding-bottom: 2rem;
+    margin-top: 1.5rem;
+    gap: 20px;
+  }
+  .prodimgdiv {
+    margin: auto;
+    padding: 2rem;
+    border: 1px solid black;
+    margin-left: 8rem;
+  }
+  .prodimg {
+    width: 320px;
+    height: 370px;
+    padding: 0.5rem;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+      rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+      rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  }
+  .title {
+    color: gray;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: -20px;
+  }
+  .star {
+    border-bottom: 1px solid rgb(191, 187, 187);
+    margin-bottom: 1rem;
+    margin-top: -20px;
+  }
+  .price {
+    font-size: 25px;
+    font-weight: 700;
+    color: black;
+  }
+  .subtit {
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: line-through;
+  }
+  .offpercentage {
+    font-size: 22px;
+    font-weight: 450;
+    color: #ff9a5a;
+  }
+  .taxes {
+    color: #03a687;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: -20px;
+  }
+  .infodiv {
+    text-align: start;
+    margin: auto;
+    margin-left: 8rem;
+    padding: 2rem;
+    border: 1px solid black;
+  }
+  .sizecircle {
+    border: 0.5px solid gray;
+    background-color: #03a687;
+
+    font-size: 15px;
+  }
+  .avatar {
+    display: flex;
+    gap: 10px;
+  }
+  .sizecircle:hover {
+    border: 2px solid #ff3e6c;
+    background-color: #ff3e6c;
+  }
+
+  .btndiv {
+    display: flex;
+    gap: 20px;
+    margin-top: 2rem;
+  }
+  .cartbtn {
+    width: 250px;
+    height: 45px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff3e6c;
+    color: white;
+  }
+  .wishbtn {
+    width: 200px;
+    border: 1px solid gray;
+    color: black;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: white;
+  }
+  .sizeselect {
+    font-size: 25px;
+    font-weight: 700;
+    color: black;
+  }
+  .sizechart {
+    font-size: 25px;
+    font-weight: 600;
+    color: #ff3e6c;
+    margin-left: 3rem;
+  }
+  .mrpdiv {
+    display: flex;
+    gap: 20px;
+  }
+  /* //////////////////////////////////Infodiv */
+  .downdiv {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  .okdiv {
+    display: flex;
+    gap: 20px;
+  }
+  .pincode {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: auto;
+    margin-left: 5rem;
+    padding: 6rem;
+  }
+  .offer {
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: start;
+    margin: auto;
+    margin-left: 5rem;
+    padding: 6rem;
+  }
+  .orangeprice {
+    color: #ff9a5a;
+  }
+  .tagp {
+    color: black;
+    font-size: 18px;
+    font-weight: 450;
+    margin: 1rem;
+  }
+  .pink {
+    color: #ff3e6c;
+    font-weight: 700;
+    margin-left: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .detailsdiv {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgb(223, 208, 208);
+    padding-bottom: 2rem;
+    margin-top: 1.5rem;
+    gap: 20px;
+  }
+  .prodimgdiv {
+    margin: auto;
+    padding: 1rem;
+    border: 1px solid black;
+    margin-left: 3rem;
+    width: 260px;
+  }
+  .prodimg {
+    width: 220px;
+    height: 270px;
+    padding: 0.5rem;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+      rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+      rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  }
+  .title {
+    color: gray;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: -20px;
+  }
+  .star {
+    border-bottom: 1px solid rgb(191, 187, 187);
+    margin-bottom: 1rem;
+    margin-top: -20px;
+  }
+  .price {
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+  }
+  .subtit {
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: line-through;
+  }
+  .offpercentage {
+    font-size: 14px;
+    font-weight: 450;
+    color: #ff9a5a;
+  }
+  .taxes {
+    color: #03a687;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: -20px;
+  }
+  .infodiv {
+    text-align: start;
+    margin: auto;
+    margin-left: 3rem;
+    padding: 3.3rem;
+    border: 1px solid black;
+  }
+
+  .btndiv {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 1rem;
+  }
+  .cartbtn {
+    width: 200px;
+    height: 35px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff3e6c;
+    color: white;
+  }
+  .wishbtn {
+    width: 200px;
+    height: 35px;
+    border: 1px solid gray;
+    color: black;
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: white;
+  }
+  .sizeselect {
+    font-size: 15px;
+    font-weight: 700;
+    color: black;
+  }
+  .sizechart {
+    font-size: 15px;
+    font-weight: 600;
+    color: #ff3e6c;
+    margin-left: 0.5rem;
+  }
+  .mrpdiv {
+    display: flex;
+    gap: 10px;
+  }
+  /* //////////////////////////////////Infodiv */
+  .downdiv {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0.5rem;
+  }
+  .okdiv {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .pincode {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: auto;
+  }
+  .offer {
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: start;
+    margin: auto;
+    font-size: 15px;
+  }
+  .orangeprice {
+    color: #ff9a5a;
+  }
+  .tagp {
+    color: black;
+    font-size: 18px;
+    width: 280px;
+    margin-left: -4rem;
+  }
+  .pink {
+    color: #ff3e6c;
+    font-weight: 700;
+    width: 280px;
+    margin-left: -3rem;
+    font-size: 17px;
+  }
+  h5 {
+    width: 280px;
+    margin-left: -4rem;
+    font-size: 16px;
+  }
+}

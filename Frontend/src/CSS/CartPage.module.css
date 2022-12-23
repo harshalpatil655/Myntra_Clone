@@ -98,3 +98,187 @@ h5 {
   color: #ff3e6c;
   text-align: start;
 }
+@media (max-width: 1024px) {
+  .mainflex {
+    display: flex;
+    flex-direction: column-reverse;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+    gap: 40px;
+  }
+  .flex1 {
+    margin: auto;
+    width: 620px;
+    border: 5px solid black;
+  }
+  .flex2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    margin: auto;
+    width: 600px;
+    padding: 2rem;
+    border: 1px solid black;
+  }
+
+  .flex2 > div {
+    width: 240px;
+    border: 5px solid black;
+  }
+  img {
+    width: 220px;
+    height: 280px;
+  }
+  .proddiv {
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+  }
+  .title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+  }
+  .prodbrand {
+    text-align: start;
+    font-weight: 700;
+  }
+  .prodbrand > p {
+    color: #000;
+    font-size: 25px;
+  }
+  .title {
+    text-align: start;
+    margin-top: -1.5rem;
+  }
+  .detaildiv {
+    text-align: start;
+  }
+  .price {
+    font-size: 15px;
+    font-weight: 700;
+    color: #000;
+  }
+  .subtit {
+    text-decoration: line-through;
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+  .percent {
+    color: orange;
+    font-weight: 500;
+  }
+  .btn {
+    background-color: #ff3e6c;
+    color: white;
+    border: none;
+    width: 220px;
+    height: 40px;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 17px;
+  }
+  .calcudiv {
+    padding: 1.5rem;
+  }
+  .mybag {
+    color: #14cda8;
+    text-decoration: underline;
+    font-weight: 600;
+  }
+}
+@media (max-width: 480px) {
+  .mainflex {
+    display: flex;
+    flex-direction: column-reverse;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+    gap: 40px;
+  }
+  .flex1 {
+    margin: auto;
+    width: 280px;
+    border: 5px solid black;
+    margin-left: -1rem;
+  }
+  .flex2 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    margin: auto;
+    width: 260px;
+    margin-left: -2rem;
+    border: 1px solid black;
+  }
+
+  .flex2 > div {
+    width: 220px;
+    border: 5px solid black;
+  }
+  img {
+    width: 220px;
+    height: 280px;
+  }
+  .proddiv {
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+  }
+  .title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+  }
+  .prodbrand {
+    text-align: start;
+    font-weight: 700;
+  }
+  .prodbrand > p {
+    color: #000;
+    font-size: 25px;
+  }
+  .title {
+    text-align: start;
+    margin-top: -1.5rem;
+  }
+  .detaildiv {
+    text-align: start;
+  }
+  .price {
+    font-size: 15px;
+    font-weight: 700;
+    color: #000;
+  }
+  .subtit {
+    text-decoration: line-through;
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+  .percent {
+    color: orange;
+    font-weight: 500;
+  }
+  .btn {
+    background-color: #ff3e6c;
+    color: white;
+    border: none;
+    width: 220px;
+    height: 40px;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 17px;
+  }
+  .calcudiv {
+    padding: 1.5rem;
+  }
+  .mybag {
+    color: #14cda8;
+    text-decoration: underline;
+    font-weight: 600;
+  }
+  .myh5 {
+    margin-left: 0.5rem;
+  }
+}

@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { mensData, postcart } from "../Redux/AppReducer/action";
 import styles from "../CSS/ProductPage.module.css";
-import { Avatar, Button, Rating, TextField } from "@mui/material";
+import { Button, Rating, TextField } from "@mui/material";
 import { BsTruck, BsFillTagFill, BsListUl } from "react-icons/bs";
 
 const ProductPage = () => {
@@ -74,13 +74,7 @@ const ProductPage = () => {
               <span className={styles.sizechart}>{`SIZE CHART >`}</span>{" "}
             </p>
           </div>
-          <div className={styles.avatar}>
-            <Avatar className={styles.sizecircle}>S</Avatar>
-            <Avatar className={styles.sizecircle}>M</Avatar>
-            <Avatar className={styles.sizecircle}>L</Avatar>
-            <Avatar className={styles.sizecircle}>XL</Avatar>
-            <Avatar className={styles.sizecircle}>XXL</Avatar>
-          </div>
+
           <div className={styles.btndiv}>
             <button
               onClick={() => handleCart(product)}
@@ -113,14 +107,30 @@ const ProductPage = () => {
             Please enter PIN code to check delivery time & Pay on Delivery
             Availability
           </p>
-          <h5>100% Original Products</h5>
-          <h5>Pay on delivery might be available</h5>
-          <h5>Easy 30 days returns and exchanges</h5>
-          <h5>Try & Buy might be available</h5>
           <h5>
+            {" "}
+            <BsListUl size={10} /> 100% Original Products
+          </h5>
+          <h5>
+            {" "}
+            <BsListUl size={10} /> Pay on delivery might be available
+          </h5>
+          <h5>
+            {" "}
+            <BsListUl size={10} /> Easy 30 days returns and exchanges
+          </h5>
+          <h5>
+            {" "}
+            <BsListUl size={10} /> Try & Buy might be available
+          </h5>
+          <h5>
+            <BsListUl size={10} />
             Seller :<span className={styles.pink}>Omnitech Retail</span>
           </h5>
-          <p className={styles.pink}>Enter Delivery Details </p>
+          <p className={styles.pink}>
+            {" "}
+            <BsListUl size={10} /> Enter Delivery Details{" "}
+          </p>
         </div>
         <div className={styles.offer}>
           <h3>
